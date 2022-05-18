@@ -1,5 +1,5 @@
 # ExcelSigDigits
-*work in progress, not yet fully functioning*
+*work in progress, not yet fully functioning*  
 VBA macro to format cells with given number of significant decimal digits.  
 It sets only the format code and doesn't change the cell value. 
 It respects and maintains the percent format. 
