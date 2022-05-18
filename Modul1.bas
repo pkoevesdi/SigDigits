@@ -1,6 +1,5 @@
-Attribute VB_Name = "Modul1"
+Attribute VB_Name = "significantDigits"
 Sub significantDigits()
-Attribute significantDigits.VB_ProcData.VB_Invoke_Func = "d\n14"
 'improved from
 'http://www.spreadsheet-validierung.de/excel-signifikante-stellen
 Dim i, digits, rows, cols, nRow, target As Integer
@@ -17,9 +16,7 @@ For i = 1 To Selection.Count
     Else
         percentsign = ""
     End If
-    estring = WorksheetFunction.Text(tmp, "#E+##")
-    digits = target - CInt(Split(estring, "E")(1)) - 1
-    digits = WorksheetFunction.Min(target, digits)
+    digits = -Log(tmp) / Log(10#) + target - 1
     digits = WorksheetFunction.Max(0, digits)
     'remove trailing zeroes:
     Do While True
