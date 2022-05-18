@@ -10,13 +10,14 @@ cols = Selection.Column
 For i = 1 To Selection.Count
     nRow = rows + i - 1
     tmp = Cells(nRow, cols)
+    If IsNumeric(tmp) And Not IsEmpty(tmp) Then
     If InStr(Cells(nRow, cols).NumberFormat, "%") Then
         percentsign = "%"
         tmp = tmp * 100
     Else
         percentsign = ""
     End If
-    digits = -Log(tmp) / Log(10#) + target - 1
+    digits = -Int(Log(tmp) / Log(10#)) + target - 1
     digits = WorksheetFunction.Max(0, digits)
     'remove trailing zeroes:
     Do While True
@@ -35,6 +36,7 @@ For i = 1 To Selection.Count
         Cells(nRow, cols).NumberFormat = "0" & percentsign
     Else
         Cells(nRow, cols).NumberFormat = "0." & String(CLng(digits), "0") & percentsign
+    End If
     End If
 Next i
 End Sub
