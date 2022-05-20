@@ -16,7 +16,7 @@ Sub significantDigits()
         tmp = cel.Value
         If IsNumeric(tmp) And Not IsEmpty(tmp) Then
             If InStr(cel.NumberFormat, "%") Then
-                unitsign = "%"
+                unitsign = " %"
                 tmp = tmp * 100
             ElseIf InStr(cel.NumberFormat, "€") Then
                 unitsign = " €"
