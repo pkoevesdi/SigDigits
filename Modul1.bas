@@ -34,7 +34,7 @@ Sub significantDigits()
             'remove trailing zeroes:
             Do While True
                 If digits > 0 Then
-                    If tmp = Round(tmp, digits - 1) Then
+                    If Round(tmp, WorksheetFunction.Min(digits + 10, 22)) = Round(tmp, digits - 1) Then
                         digits = digits - 1
                     Else
                         Exit Do
@@ -52,3 +52,4 @@ Sub significantDigits()
         End If
     Next cel
 End Sub
+
