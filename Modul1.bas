@@ -28,7 +28,7 @@ Sub significantDigits()
             If tmp = 0 Then
                 digits = target - 1
             Else
-                digits = -Int(Log(tmp) / Log(10#)) + target - 1
+                digits = -Int(Log(Abs(tmp)) / Log(10#)) + target - 1
                 digits = WorksheetFunction.Max(0, digits)
             End If
             'remove trailing zeroes:
