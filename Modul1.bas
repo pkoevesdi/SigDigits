@@ -26,7 +26,7 @@ Sub significantDigits()
                 unitsign = ""
             End If
             If tmp = 0 Then
-                digits = target - 1
+                digits = 0
             Else
                 digits = -Int(Log(Abs(tmp)) / Log(10#)) + target - 1
                 digits = WorksheetFunction.Max(0, digits)
