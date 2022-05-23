@@ -1,15 +1,17 @@
 Sub significantDigits()
     'improved from
-    'http://www.spreadsheet-validierung.de/excel-signifikante-stellen
+    'http://www.spreadsheet-validierung.de/excel-signifikante-stellen/
+    
     Dim digits, target As Integer
     Dim tmp, unitsign As String
     Dim cel, selectedRange As Range
-    Set selectedRange = Application.Selection
-    target = 3 'target amount of significant decimal digits
     Dim start As Date
+    
+    target = 3 'target amount of significant decimal digits
+    Set selectedRange = Application.Selection
     start = Now
     For Each cel In selectedRange.Cells
-        If DateDiff("s", start, Now) >= 5 Then
+        If DateDiff("s", start, Now) > 5 Then
             MsgBox ("Timeout 5 s reached. Make a smaller selection.")
             Exit Sub
         End If
