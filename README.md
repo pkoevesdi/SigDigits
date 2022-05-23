@@ -8,7 +8,7 @@ It shows trailing zeroes only if they are significant / reliable and only up to 
 It works with split selection of cells.  
 It has a safety timeout of 5 seconds. If it it gets reached, make a smaller selection.
 
-*improved from http://www.spreadsheet-validierung.de/excel-signifikante-stellen*
+*improved from http://www.spreadsheet-validierung.de/excel-signifikante-stellen/*
 
 ## Usage
 - install in excel as macro
