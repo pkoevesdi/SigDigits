@@ -1,6 +1,6 @@
-# ExcelSigDigits
+# SigDigits
 
-VBA macro to format cells with given number of significant decimal digits.  
+Macro to format cells with given number of significant decimal digits.  
 It sets only the format code and doesn't change the cell value.  
 It respects and maintains the percent format, the € and the $ sign.  
 It changes only the appearance of the fractional digits, it doesn't round anything before the decimal separator.  
@@ -11,7 +11,7 @@ It has a safety timeout of 5 seconds. If it it gets reached, make a smaller sele
 *improved from http://www.spreadsheet-validierung.de/excel-signifikante-stellen/*
 
 ## Usage
-- install in excel as macro, for instance user-wide inside PERSONAL.XLSB (record empty macro to produce PERSONAL.XLSB)
+- install in MS Excel or LibreOffice Calc as macro, for instance user-wide inside PERSONAL.XLSB (record empty macro to produce PERSONAL.XLSB)
 - [optional] set up keyboard shortcut
 - mark cells
 - execute macro
